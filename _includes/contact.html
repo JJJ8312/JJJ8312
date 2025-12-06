@@ -7,26 +7,39 @@
             </div>
         </div>
 
-        <form id="contactForm" method="POST" action="https://formspree.io/f/xblnkbwj">
+        <!-- Formspree form -->
+        <form action="https://formspree.io/f/{your_form_id}" method="POST" id="contactForm">
             <div class="row">
+                <!-- Left column: Name, Email, Subject -->
                 <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
-                    <input type="email" name="_replyto" class="form-control" placeholder="Your Email *" required>
-                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" class="form-control" placeholder="Your Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    </div>
                 </div>
 
+                <!-- Right column: Message -->
                 <div class="col-md-6">
-                    <textarea name="message" class="form-control" placeholder="Your Message *" required></textarea>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message *" required></textarea>
+                    </div>
                 </div>
 
+                <!-- Submit button -->
                 <div class="col-lg-12 text-center">
-                    <button type="submit" class="btn btn-xl">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-xl">Send Message</button>
                 </div>
             </div>
         </form>
     </div>
 
+    <!-- Map image -->
     <div class="map">
-        <img src="{{ site.baseurl }}/img/map-image.png" class="img-responsive" alt="">
+        <img src="{{ site.baseurl }}/img/map-image.png" class="img-responsive" alt="Map">
     </div>
 </section>
